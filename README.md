@@ -92,23 +92,56 @@ A  B  NOT B  A AND (NOT B)
    ```
    f(A, B, C) = A OR B OR C
    ```
+    0  0  0    0
+    0  0  1    1
+    0  1  0    1
+    .  .  .    .
+    1  1  1    1
+
 
 2. **Build a Conditional Light**  
    Write a function `f(A, B) = A AND (NOT B)`. Draw the truth table and explain in which situation the output is ON.
 
-3. **Design Your Own Rule**  
+      0  0    0
+      0  1    0
+      1  0    1
+      1  1    0 
+
+      only if only A is ON
+
+4. **Design Your Own Rule**  
    Invent your own rule using A, B, and logical operations (AND, OR, NOT). Write the Boolean expression and draw the truth table for all 4 input combinations.
 
-4. **Combine Three Inputs**  
+  f(A,B) = (NOT A) OR (NOT B)
+
+      0  0    1
+      0  1    1
+      1  0    1
+      1  1    0
+    
+
+
+5. **Combine Three Inputs**  
    Let A, B, C be three switches. Define a Boolean function that turns on a lamp only if exactly **two of them** are ON.
+
+  f(A, B) = (A AND (NOT B) AND (NOT C)) OR ((NOT A) AND B AND (NOT C)) OR ((NOT A) AND (NOT B) AND C)
 
 ---
 
 ## 3) Questions
 1. How does Boolean algebra simplify how we describe switch logic?
+
+
 2. Can every possible binary function be described using AND, OR, and NOT?
+  yes
+
 3. Why are truth tables useful?
+
+  
+
 4. What happens to the number of rows in a truth table as you add more inputs?
+
+  exp2
 
 ---
 
